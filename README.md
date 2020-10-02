@@ -25,3 +25,8 @@ python3 VideoImageConverter.py image2Video --imgDir='images/dir' --fps=20 --vide
 
 # also, you can use `python3 VideoImageConverter.py -h` to see more.
 ```
+
+##  License
+
+This software is freely available under the MIT Public License.
+
