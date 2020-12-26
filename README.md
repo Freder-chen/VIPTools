@@ -29,4 +29,3 @@ python3 VideoImageConverter.py image2Video --imgDir='images/dir' --fps=20 --vide
 ##  License
 
 This software is freely available under the MIT Public License.
-
