@@ -1,6 +1,6 @@
-# VideoImageConverter
+# VIPTool
 
-VideoImageConverter is a tool for **converting video frames to images** or **images to video** using opencv.
+VIPTool is a simple video and image processing tool for personal use.
 
 ## Description
 
