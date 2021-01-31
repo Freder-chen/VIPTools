@@ -1,6 +1,6 @@
-# VIPTool
+# VIPTools
 
-VIPTool is a simple video and image processing tool for personal use.
+VIPTools is a simple video and image processing tool for personal use.
 
 ## Description
 
@@ -15,17 +15,48 @@ In target detection, the raw data is often a video, while the data needed for th
   - fire
   - glob
 
-## Usage
+## Quick Start
+
+### Installation
+
+``` bash
+pip3 install -r requirements.txt
+```
+
+### Usage
+
+#### 1. shell
 
 ```bash
-# video to images
-python3 VideoImageConverter.py video2Image --videoPath='video/path' --imgDir='out'
-# images to video
-python3 VideoImageConverter.py image2Video --imgDir='images/dir' --fps=20 --videoPath='out.avi'
+# VIPTools has two class, VideoImageConverter and VideoProcesser.
 
-# also, you can use `python3 VideoImageConverter.py -h` to see more.
+# In VideoImageConverter, we can
+# video to images
+python3 -m VIPTools VideoImageConverter video2images --video_filename='video/filename' --imgdir='out'
+# images to video
+python3 -m VIPTools VideoImageConverter images2video --imgdir='images/dir' --fps=20 --video_filename='out.avi'
+
+# In VideoProcesser, we can
+# avi to mp4
+python3 -m VIPTools VideoProcesser avi2mp4 --avi_filename='video/filename' --mp4_filename='out'
+# crop video
+python3 -m VIPTools VideoProcesser crop_video --video_filename='video/filename' --crop_filename='out' [--start_time=[0] --end_time=[int]]
+
+# also, we can use `python3 VIPTools -h` to see more.
+```
+
+#### 2. python
+
+```python3
+import VIPTools
+
+video_filename = 'a.mp4'
+imgdir = 'out'
+
+VIPTools.VideoImageConverter().video2image(video_filename, imgdir)
+VIPTools.VideoImageConverter().image2video(imgdir, video_filename, fps=20)
 ```
 
 ##  License
 
-This software is freely available under the MIT Public License.
+Licensed under the MIT Public License.
