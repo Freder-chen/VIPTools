@@ -8,3 +8,6 @@ __pycache__/
 
 # VSCode
 *.vscode
+
+# Ignore source file
+*.mp4

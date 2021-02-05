@@ -14,5 +14,5 @@ def mkdir(dir_):
 
     dir_: folder path
     '''
-    if not os.path.exists(dir_):
+    if dir_ is not None and isinstance(dir_, str) and len(dir_) > 0 and not os.path.exists(dir_):
         os.makedirs(dir_)

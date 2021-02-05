@@ -38,9 +38,9 @@ python3 -m VIPTools VideoImageConverter images2video --imgdir='images/dir' --fps
 
 # In VideoProcesser, we can
 # avi to mp4
-python3 -m VIPTools VideoProcesser avi2mp4 --avi_filename='video/filename' --mp4_filename='out'
+python3 -m VIPTools VideoProcesser avi2mp4 --avi_filename='video/filename.avi' --mp4_filename='out.mp4'
 # crop video
-python3 -m VIPTools VideoProcesser crop_video --video_filename='video/filename' --crop_filename='out' [--start_time=[0] --end_time=[int]]
+python3 -m VIPTools VideoProcesser crop_video --video_filename='video/filename' --crop_filename='out[.avi|.mp4]' [--start_time=[0] --end_time=[int]]
 
 # also, we can use `python3 VIPTools -h` to see more.
 ```
