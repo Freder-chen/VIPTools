@@ -35,10 +35,11 @@ class VideoProcesser(object):
         fps = video_capture.get(cv2.CAP_PROP_FPS)
         width = int(video_capture.get(cv2.CAP_PROP_FRAME_WIDTH))
         height = int(video_capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        print(mp4_filename, length, fps, (width, height))
 
         mkdir(os.path.dirname(mp4_filename))
         
-        video_writer = self._get_video_writer(mp4_filename, 'mp4v', fps, (width, height))
+        video_writer = self._get_video_writer(mp4_filename, 'mp4v', fps if fps not in [float('inf'), float('nan')] else 20, (width, height))
         pbar = tqdm(total=length, desc='avi2mp4')
         while video_capture.isOpened():
             rval, frame = video_capture.read()
